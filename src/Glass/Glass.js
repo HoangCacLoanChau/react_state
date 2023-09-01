@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { data } from "../data";
+import { data } from "./data";
 import Background from "./Background";
 import Model from "./Model";
+import GlassList from "./GlassList";
 
 export default class Glass extends Component {
   state = {
@@ -23,6 +24,7 @@ export default class Glass extends Component {
       >
         <Background />
         <Model />
+        <GlassList glassList={this.state.glassArr} />
       </div>
     );
   }

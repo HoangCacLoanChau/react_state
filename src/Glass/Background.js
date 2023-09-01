@@ -5,13 +5,11 @@ export default class Background extends Component {
     return (
       <div>
         <div
-          className="nav"
+          className="n py-3 text-center "
           style={{
             color: "white",
             background: "rgba(61,61,61,0.6)",
             width: "100vw",
-            textAlign: "center",
-            padding: "20px 0",
             fontSize: "30px",
           }}
         >
