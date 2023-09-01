@@ -7,7 +7,14 @@ import GlassList from "./GlassList";
 export default class Glass extends Component {
   state = {
     glassArr: data,
+    activeGlass: "./glassesImage/v1.png",
   };
+  handleChangeGlass = (glass) => {
+    this.setState({
+      activeGlass: glass,
+    });
+  };
+
   render() {
     let backgroundURL = "./glassesImage/background.jpg";
 
@@ -23,7 +30,7 @@ export default class Glass extends Component {
         }}
       >
         <Background />
-        <Model />
+        <Model activeGlass={this.state.activeGlass} />
         <GlassList glassList={this.state.glassArr} />
       </div>
     );
