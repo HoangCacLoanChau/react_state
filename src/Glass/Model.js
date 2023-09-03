@@ -2,12 +2,15 @@ import React, { Component } from "react";
 
 export default class Model extends Component {
   renderActiveGlass = () => {
+    let { name, url, price, dsc } = this.props.activeGlass;
+
     return (
       <div className="chosen-glass position-absolute ">
-        <img src={this.props.activeGlass} alt="" />
+        <img src={url} alt="" />
       </div>
     );
   };
+  renderGlassInfo = () => {};
   render() {
     let modelImage = "./glassesImage/model.jpg";
     return (
@@ -15,7 +18,7 @@ export default class Model extends Component {
         className="d-flex justify-content-center 
        position-relative"
       >
-        <img src={modelImage} alt="" style={{ height: "300px" }} />
+        <img src={modelImage} alt="" style={{ height: "350px" }} />
         {this.renderActiveGlass()}
       </div>
     );

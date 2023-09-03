@@ -15,6 +15,9 @@ export default class GlassList extends Component {
               style={{
                 width: "80%",
               }}
+              onClick={() => {
+                this.props.handleChangeGlass(glass);
+              }}
             />
           </button>
         </div>

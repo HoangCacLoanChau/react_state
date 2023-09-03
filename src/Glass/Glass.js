@@ -7,12 +7,13 @@ import GlassList from "./GlassList";
 export default class Glass extends Component {
   state = {
     glassArr: data,
-    activeGlass: "./glassesImage/v1.png",
+    activeGlass: {},
   };
   handleChangeGlass = (glass) => {
     this.setState({
       activeGlass: glass,
     });
+    console.log(this.state.activeGlass);
   };
 
   render() {
@@ -31,7 +32,7 @@ export default class Glass extends Component {
       >
         <Background />
         <Model activeGlass={this.state.activeGlass} />
-        <GlassList glassList={this.state.glassArr} />
+        <GlassList glassList={this.state.glassArr} handleChangeGlass={this.handleChangeGlass} />
       </div>
     );
   }
