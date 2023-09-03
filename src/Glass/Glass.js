@@ -7,7 +7,13 @@ import GlassList from "./GlassList";
 export default class Glass extends Component {
   state = {
     glassArr: data,
-    activeGlass: {},
+    activeGlass: {
+      id: 1,
+      price: 30,
+      name: "GUCCI G8850U",
+      url: "./glassesImage/v1.png",
+      desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
+    },
   };
   handleChangeGlass = (glass) => {
     this.setState({
@@ -32,7 +38,11 @@ export default class Glass extends Component {
       >
         <Background />
         <Model activeGlass={this.state.activeGlass} />
-        <GlassList glassList={this.state.glassArr} handleChangeGlass={this.handleChangeGlass} />
+        <GlassList
+          activeGlass={this.state.activeGlass}
+          glassList={this.state.glassArr}
+          handleChangeGlass={this.handleChangeGlass}
+        />
       </div>
     );
   }
